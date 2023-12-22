@@ -36,3 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(checkForMatch, 1000);
       }
     }
+    function checkForMatch() {
+      const [card1, card2] = flippedCards;
+  
+      if (card1.dataset.value === card2.dataset.value) {
+        // Matched pair
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        matchedPairs++;
+  
+        if (matchedPairs === cardValues.length) {
+          alert('Congratulations! You matched all pairs.');
+        }
+      } else {
+        // Not a match, flip cards back
+        card1.textContent = '?';
+        card2.textContent = '?';
+      }

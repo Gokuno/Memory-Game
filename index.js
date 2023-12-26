@@ -53,3 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
         card1.textContent = '?';
         card2.textContent = '?';
       }
+        
+    flippedCards = []; // Reset flipped cards
+    }
+  
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+  });

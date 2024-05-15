@@ -7,13 +7,11 @@
     font-size: 700; 
 }
 body {
+   min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 15px;
-  }
+    flex-direction: column;
+    padding: 30px;
+}
 .Container {
     background-color: #1cace0;
     flex: 1;
